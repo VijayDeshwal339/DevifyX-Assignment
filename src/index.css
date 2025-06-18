@@ -1,0 +1,142 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Smooth scrolling for all elements */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optimize rendering performance */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500 dark:bg-gray-500;
+}
+
+/* Firefox scrollbar */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(156 163 175) rgb(243 244 246);
+}
+
+html.dark {
+  scrollbar-color: rgb(75 85 99) rgb(31 41 55);
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  @apply outline-none ring-2 ring-primary-500 ring-offset-2 ring-offset-white dark:ring-offset-gray-900;
+}
+
+/* Button focus styles */
+button:focus {
+  @apply ring-2 ring-primary-500 ring-offset-2;
+}
+
+/* Improved text selection */
+::selection {
+  @apply bg-primary-200 text-primary-900;
+}
+
+::-moz-selection {
+  @apply bg-primary-200 text-primary-900;
+}
+
+/* Performance optimizations for animations */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-scroll {
+  will-change: scroll-position;
+}
+
+/* Reduce layout thrashing */
+.animate-fade-in,
+.animate-slide-up,
+.animate-bounce-soft {
+  will-change: transform, opacity;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .will-change-transform,
+  .will-change-scroll {
+    will-change: auto;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .bg-gradient-to-br {
+    @apply bg-black text-white;
+  }
+  
+  .text-gray-600 {
+    @apply text-black dark:text-white;
+  }
+}
+
+/* Print styles */
+@media print {
+  .fixed {
+    @apply relative;
+  }
+  
+  .sticky {
+    @apply relative;
+  }
+  
+  button {
+    @apply hidden;
+  }
+}
+
+/* Loading states */
+.loading {
+  @apply animate-pulse bg-gray-200 dark:bg-gray-700;
+}
+
+/* Glassmorphism utility */
+.glass {
+  @apply bg-white/10 backdrop-blur-md border border-white/20;
+}
+
+.glass-dark {
+  @apply bg-black/10 backdrop-blur-md border border-black/20;
+}
+
+/* Smooth transforms for better performance */
+.transform-gpu {
+  transform: translate3d(0, 0, 0);
+}
