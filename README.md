@@ -28,7 +28,7 @@ A modern React application demonstrating sticky headers, smooth scrolling, and r
 
 ## 🚀 Live Demo
 
-[View Live Demo](https://your-demo-link.netlify.app) 
+[View Live Demo](https://devify-x-assignment-taupe.vercel.app/) 
 
 ## 🛠️ Tech Stack
 
@@ -49,8 +49,8 @@ A modern React application demonstrating sticky headers, smooth scrolling, and r
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/sticky-scroll-showcase.git
-   cd sticky-scroll-showcase
+   git clone https://github.com/VijayDeshwal339/DevifyX-Assignment.git
+   cd DevifyX-Assignment
    ```
 
 2. **Install dependencies**
